@@ -6,5 +6,3 @@ src/karma.conf.js
 src/tsconfig.app.json
 src/tsconfig.spec.json
 tsconfig.json
-
-index.html
