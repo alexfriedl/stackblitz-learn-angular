@@ -1,0 +1,58 @@
+/* Add application styles & imports to this file! */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+body {
+  background: #eee;
+  font-family: Roboto;
+  margin: 36px auto;
+  max-width: 700px;
+}
+
+.wrapper {
+  background: white;
+  padding: 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  margin-top: 36px;
+}
+.wrapper p {
+  margin: 0;
+}
+.wrapper h4 {
+  color: blueviolet;
+  margin: 0 0 8px;
+}
+
+h3 {
+  margin: 0;
+}
+
+h5 {
+  margin-top: 0;
+  color: blueviolet;
+}
+
+.wrapper--item {
+  padding: 18px;
+}
+
+.wrapper--item:first-child h4 {
+  margin-top: 18px;
+}
+
+.wrapper--item:nth-child(2n) {
+  background-color: #f5f5f5;
+}
+
+.component {
+  margin: 4px 0;
+}
+
+.component--item {
+  opacity: 0.35;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1.15;
+  min-width: 170px;
+  display: inline-block;
+}

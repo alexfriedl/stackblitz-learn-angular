@@ -1,0 +1,189 @@
+<hello name="{{ name }}"></hello>
+
+<h3>Todo</h3>
+<ul>
+  <li>Add RXJS Click Event</li>
+  <li>Add a form component</li>
+</ul>
+
+<div class="wrapper">
+  <!-- 
+  * Example ID1
+  * 
+  * @Input
+  * from app to gallery 
+  *
+  * app.html
+  * app.ts
+  * shared/gallery.html
+  * shared/gallery.ts
+  *
+  * Use the child's selector, here <app-gallery>, 
+  * as a directive within the parent component template. 
+  * Then, use property binding to bind the property 
+  * in the child to the property of the parent.
+  -->
+  <div class="wrapper--item">
+    <h3>Component communication</h3>
+    <h4>Example ID1</h4>
+    <h5>@Input</h5>
+    <app-gallery [Igallery]="pictures"></app-gallery>
+  </div>
+
+  <!-- 
+  * Example ID2
+  * 
+  * @Output
+  * from characteristics to app 
+  *
+  * app.html
+  * app.ts
+  * shared/characteristics.html
+  * shared/characteristics.ts
+  -->
+  <div class="wrapper--item">
+    <h4>Example ID2</h4>
+    <h5>@Output</h5>
+    <div class="component">
+      <span class="component--item">app says </span> {{message}}
+    </div>
+    <app-characteristics (clickEvent)="receiveMessage($event)"></app-characteristics>
+  </div>
+
+  <!-- 
+  * Example ID3
+  * 
+  * @ViewChild
+  * from card to app 
+  * 
+  * app.html
+  * app.ts
+  * shared/card.html
+  * shared/card.ts
+  -->
+  <div class="wrapper--item">
+    <h4>Example ID3</h4>
+    <h5>@ViewChild</h5>
+    <div class="component">
+      <span class="component--item">app says </span> {{color}}
+    </div>
+  </div>
+
+  <!-- 
+  * Example ID4
+  * 
+  * @Output and @Input
+  * from advertisement to app to notification
+  * 
+  * app.html
+  * app.ts
+  * notification.html
+  * notification.ts
+  * shared/advertisement.ts
+  -->
+  <div class="wrapper--item">
+    <h4>Example ID4</h4>
+    <h5>@Output AND @Input</h5>
+    <!-- Displays data from advertisement -->
+    <div>
+      <span class="component--item">app says </span> {{trackedVisitors}}
+    </div>
+    <!-- @Inputs data from app to notification-->
+    <app-notification [ItrackedVisitors]="trackedVisitors"></app-notification>
+    <!-- @Outputs data from advertisment to app-->
+    <app-advertisement (resizeEvent)="receiveTrackedVisitors($event)"></app-advertisement>
+  </div>
+
+  <!-- 
+  * Example ID9
+  * 
+  * RXJS
+  * from services/customer to notification (sibling) 
+  * and app (parent) and shared/card (child)
+  *
+  * https://www.youtube.com/watch?v=I317BhehZKM&list=PLUhHv9w4GZ2mXwJRnUThA2O0_tTnkxTTb&t=42s
+  * 
+  * app.html
+  * app.ts
+  * rxjs-sibling.html
+  * rxjs-sibling.ts
+  * shared/rxjs-child.html
+  * shared/rxjs-child.ts
+  * services/customer.service.html
+  * services/customer.service.ts
+  -->
+  <div class="wrapper--item">
+    <h4>Example ID9</h4>
+    <h5>RXJS</h5>
+    <div class="component">
+      <span class="component--item">rxjs-parent says </span> {{customerMessage}}
+    </div>
+    <app-rxjs-child></app-rxjs-child>
+    <app-rxjs-sibling></app-rxjs-sibling>
+  </div>
+</div>
+
+<div class="wrapper">
+  <!-- 
+  * Example ID5
+  * 
+  * @HostBinding
+  * @OneWayBinding
+  * 
+  * shared/wrapper.html
+  * shared/wrapper.ts
+  -->
+  <div class="wrapper--item">
+    <h3>@HostBinding <br> @OneWayBinding</h3>
+    <h4>Example ID5</h4>
+    <app-wrapper></app-wrapper>
+  </div>
+</div>
+
+<div class="wrapper">
+  <!-- 
+  * Example ID6
+  * 
+  * @ViewChild #nameRef
+  * 
+  * shared/viewchild.html
+  * shared/viewchild.ts
+  -->
+  <div class="wrapper--item">
+    <h3>@ViewChild #nameRef</h3>
+    <h4>Example ID6</h4>
+    <app-viewchild></app-viewchild>
+  </div>
+</div>
+
+<div class="wrapper">
+  <!-- 
+  * Example ID7
+  * 
+  * :host css
+  * 
+  * shared/card.html
+  * shared/card.ts
+  -->
+  <div class="wrapper--item">
+    <h3>:host css</h3>
+    <h4>Example ID7</h4>
+    <app-card></app-card>
+  </div>
+</div>
+
+<div class="wrapper">
+  <!-- 
+  * Example ID8
+  * 
+  * @HostListener
+  * 
+  * shared/hostlistener.html
+  * shared/hostlistener.ts
+  -->
+  <div class="wrapper--item">
+    <h3>@HostListener</h3>
+    <h4>Example ID8</h4>
+    <app-hostlistener></app-hostlistener>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+/**
+  * Example ID5a
+  *
+  * @HostBinding
+  * bind custom class to :host
+  *
+  * shared/wrapper.html
+  * shared/wrapper.css
+  */
+:host.wrapper .overwrite {
+  background: blue;
+  color: white;
+  padding: 8px;
+}
+
+:host.wrapper div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
