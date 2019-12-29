@@ -1,8 +1,4 @@
 node_modules
+dist
 
-package.json
 package-lock.json
-src/karma.conf.js
-src/tsconfig.app.json
-src/tsconfig.spec.json
-tsconfig.json
